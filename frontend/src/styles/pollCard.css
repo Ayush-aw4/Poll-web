@@ -1,0 +1,78 @@
+.poll-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  transition: var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.poll-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(126, 206, 193, 0.4);
+}
+
+.poll-card-question {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.poll-card-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: 0.75rem;
+}
+
+.poll-card-progress-wrapper {
+  background-color: rgba(61, 90, 110, 0.1);
+  height: 6px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.poll-card-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.poll-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.poll-card-btn {
+  background-color: rgba(126, 206, 193, 0.15);
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-xl);
+  font-size: var(--fs-sm);
+  border: 1px solid rgba(126, 206, 193, 0.3);
+  transition: var(--transition-fast);
+}
+
+.poll-card-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-dark);
+}
+
+.poll-card-creator {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}

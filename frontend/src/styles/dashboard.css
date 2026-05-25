@@ -1,0 +1,125 @@
+.dashboard-page {
+  padding: 4rem 1.5rem;
+  min-height: calc(100vh - 4rem - 9rem);
+}
+
+.dashboard-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.dashboard-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.dashboard-table-wrapper {
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-table th {
+  background-color: #f1f5f9;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: var(--fs-base);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.dashboard-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  color: var(--text-main);
+  font-size: var(--fs-base);
+  vertical-align: middle;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.dashboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.poll-question-cell {
+  font-weight: 600;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+  box-shadow: var(--shadow-md);
+}
+
+.action-btn-view {
+  background-color: #2b7bc3;
+}
+
+.action-btn-edit {
+  background-color: #798696;
+}
+
+.action-btn-delete {
+  background-color: #d94c3c;
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.dashboard-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.dashboard-empty-text {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}

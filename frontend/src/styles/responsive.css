@@ -1,0 +1,72 @@
+/* Responsive Tweaks and Layout Overrides */
+
+/* Mobile Breakpoint (< 768px) */
+@media (max-width: 768px) {
+  :root {
+    --fs-5xl: 2.25rem;
+    --fs-4xl: 1.875rem;
+    --fs-3xl: 1.5rem;
+    --fs-2xl: 1.25rem;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero-title {
+    font-size: var(--fs-4xl);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recent-polls-section {
+    padding: 3rem 0;
+  }
+
+  .recent-polls-title {
+    font-size: var(--fs-3xl);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .polls-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .auth-page, .create-poll-page, .vote-page, .results-page {
+    padding: 2rem 1rem;
+  }
+
+  .auth-container, .create-poll-card, .vote-card-container, .results-card, .dashboard-card {
+    padding: 1.5rem;
+  }
+
+  .dashboard-table th, .dashboard-table td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Tablet Breakpoint (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+
+  .polls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop and Large Screens (> 1024px) */
+@media (min-width: 1024px) {
+  /* Layout guidelines */
+}

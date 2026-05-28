@@ -7,6 +7,7 @@ const pollRoutes = require('./routes/pollRoutes');
 const { errorHandler } = require('./middleware/errorHandler');
 const path = require("path");
 
+
 dotenv.config();
 
 connectDB();
@@ -16,7 +17,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/polls', pollRoutes);
@@ -37,6 +37,11 @@ app.use((req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
   next(error);
 });
+
+app.use(cors({
+  origin: "https://poll-web.vercel.app",
+  credentials: true
+}));
 
 app.use(errorHandler);
 

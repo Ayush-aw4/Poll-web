@@ -5,7 +5,6 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const pollRoutes = require('./routes/pollRoutes');
 const { errorHandler } = require('./middleware/errorHandler');
-const path = require("path");
 
 
 dotenv.config();
@@ -14,22 +13,16 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/polls', pollRoutes);
-
-// Serve frontend
-if(process.env.NODE_ENV === "production"){
-
-    app.use(express.static(path.join(__dirname,"../frontend/dist")));
-
-    app.get("*",(req,res)=>{
-        res.sendFile(path.join(__dirname,"../frontend/dist/index.html"));
-    });
-}
+app.use(cors({
+  origin: "https://poll-web.vercel.app",
+  credentials: true
+}));
 
 // 404 handler
 app.use((req, res, next) => {
@@ -38,10 +31,7 @@ app.use((req, res, next) => {
   next(error);
 });
 
-app.use(cors({
-  origin: "https://poll-web.vercel.app",
-  credentials: true
-}));
+
 
 app.use(errorHandler);
 
